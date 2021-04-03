@@ -18,7 +18,10 @@ uses
   Vs.Pedido.Venda.Salvar in 'Pedido\Vs.Pedido.Venda.Salvar.pas',
   Vs.Pedido.Venda.Repositorio in 'Pedido\Vs.Pedido.Venda.Repositorio.pas',
   Vs.Pedido.Venda.Repositorio.Memoria in 'Pedido\Vs.Pedido.Venda.Repositorio.Memoria.pas',
-  Vs.Pedido.Venda.Testes.Unitarios in 'Pedido\Vs.Pedido.Venda.Testes.Unitarios.pas';
+  Vs.Pedido.Venda.Testes.Unitarios in 'Pedido\Vs.Pedido.Venda.Testes.Unitarios.pas',
+  Vs.Pedido.Venda.Salvar.Eventos in 'Pedido\Vs.Pedido.Venda.Salvar.Eventos.pas',
+  Vs.Comercial.Audita.Pedido.Venda in 'Auditoria\Vs.Comercial.Audita.Pedido.Venda.pas',
+  Vs.Auditor.Pedido.Venda in 'Auditoria\Vs.Auditor.Pedido.Venda.pas';
 
 {$IFNDEF TESTINSIGHT}
   runner: ITestRunner;

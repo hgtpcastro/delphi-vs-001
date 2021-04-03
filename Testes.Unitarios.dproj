@@ -93,6 +93,9 @@
         <DCCReference Include="Pedido\Vs.Pedido.Venda.Repositorio.pas"/>
         <DCCReference Include="Pedido\Vs.Pedido.Venda.Repositorio.Memoria.pas"/>
         <DCCReference Include="Pedido\Vs.Pedido.Venda.Testes.Unitarios.pas"/>
+        <DCCReference Include="Pedido\Vs.Pedido.Venda.Salvar.Eventos.pas"/>
+        <DCCReference Include="Auditoria\Vs.Comercial.Audita.Pedido.Venda.pas"/>
+        <DCCReference Include="Auditoria\Vs.Auditor.Pedido.Venda.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

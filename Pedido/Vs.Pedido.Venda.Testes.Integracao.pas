@@ -5,6 +5,7 @@ interface
 uses
   DUnitX.TestFramework,
   // Vs
+  Vs.Auditor.Pedido.Venda,
   Vs.Pedido.Venda.Salvar.Controlador;
 
 type
@@ -12,6 +13,7 @@ type
   [TestFixture]
   TPedidoVendaTestesIntegracao = class
   strict private
+    FAuditorPedidoVenda: IAuditorPedidoVenda;
     FPedidoVendaSalvarControlador: IPedidoVendaSalvarControlador;
   public
     [SetupFixture]
@@ -40,6 +42,7 @@ end;
 
 procedure TPedidoVendaTestesIntegracao.Setup;
 begin
+  FAuditorPedidoVenda := AuditorPedidoVenda;
   FPedidoVendaSalvarControlador := PedidoVendaSalvarControlador;
 end;
 

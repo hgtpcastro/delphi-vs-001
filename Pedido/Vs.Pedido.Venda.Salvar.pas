@@ -18,8 +18,11 @@ function PedidoVendaSalvar(APedidoVendaRepositorio: IPedidoVendaRepositorio): IP
 implementation
 
 uses
+  // Deb
+  EventBus,
   // Vs
-  Vs.Pedido.Venda.Entidade;
+  Vs.Pedido.Venda.Entidade,
+  Vs.Pedido.Venda.Salvar.Eventos;
 
 type
 
@@ -59,6 +62,8 @@ begin
   LPedidoVenda := TPedidoVenda.Instancia(-1, ACliente, AValor);
   try
     Result := FPedidoVendaRepositorio.Salvar(LPedidoVenda);
+    // Publica o evento de pedido de venda salvo
+    GlobalEventBus.Post(EventoPedidoVendaSalvo(LPedidoVenda), '');
   finally
     LPedidoVenda.Free;
   end;
