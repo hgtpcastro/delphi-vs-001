@@ -10,19 +10,24 @@ uses
   TestInsight.DUnitX,
   {$ELSE}
   DUnitX.Loggers.Console,
-  DUnitX.Loggers.Xml.NUnit,
   {$ENDIF }
   DUnitX.TestFramework,
-  Vs.Pedido.Venda.Testes in 'Pedido\Vs.Pedido.Venda.Testes.pas';
+  Vs.Pedido.Venda.Testes.Integracao in 'Pedido\Vs.Pedido.Venda.Testes.Integracao.pas',
+  Vs.Pedido.Venda.Salvar.Controlador in 'Pedido\Vs.Pedido.Venda.Salvar.Controlador.pas',
+  Vs.Pedido.Venda.Entidade in 'Pedido\Vs.Pedido.Venda.Entidade.pas',
+  Vs.Pedido.Venda.Salvar in 'Pedido\Vs.Pedido.Venda.Salvar.pas',
+  Vs.Pedido.Venda.Repositorio in 'Pedido\Vs.Pedido.Venda.Repositorio.pas',
+  Vs.Pedido.Venda.Repositorio.Memoria in 'Pedido\Vs.Pedido.Venda.Repositorio.Memoria.pas',
+  Vs.Pedido.Venda.Testes.Unitarios in 'Pedido\Vs.Pedido.Venda.Testes.Unitarios.pas';
 
 {$IFNDEF TESTINSIGHT}
-var
   runner: ITestRunner;
   results: IRunResults;
   logger: ITestLogger;
   nunitLogger : ITestLogger;
 {$ENDIF}
 begin
+  ReportMemoryLeaksOnShutdown := True;
 {$IFDEF TESTINSIGHT}
   TestInsight.DUnitX.RunRegisteredTests;
 {$ELSE}

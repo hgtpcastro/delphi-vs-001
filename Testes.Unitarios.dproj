@@ -86,7 +86,13 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Pedido\Vs.Pedido.Venda.Testes.pas"/>
+        <DCCReference Include="Pedido\Vs.Pedido.Venda.Testes.Integracao.pas"/>
+        <DCCReference Include="Pedido\Vs.Pedido.Venda.Salvar.Controlador.pas"/>
+        <DCCReference Include="Pedido\Vs.Pedido.Venda.Entidade.pas"/>
+        <DCCReference Include="Pedido\Vs.Pedido.Venda.Salvar.pas"/>
+        <DCCReference Include="Pedido\Vs.Pedido.Venda.Repositorio.pas"/>
+        <DCCReference Include="Pedido\Vs.Pedido.Venda.Repositorio.Memoria.pas"/>
+        <DCCReference Include="Pedido\Vs.Pedido.Venda.Testes.Unitarios.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
